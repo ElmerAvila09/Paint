@@ -33,6 +33,12 @@ def square(start, end):
 
     end_fill()
 
+'''
+La funcion dibuja un circulo en la pantalla desde la primera posicion dada por el ususario hasta el segundo click
+Entrada:posicion en la pantalla al dar el primer y segundo click
+Salida: Ninguna
+'''
+
 def circleD(start, end):
     "Draw circle from start to end."
     up()
