@@ -1,15 +1,3 @@
-"""Paint, for drawing shapes.
-
-Exercises
-
-1. Add a color.
-2. Complete circle.
-3. Complete rectangle.
-4. Complete triangle.
-5. Add width parameter.
-
-"""
-
 from turtle import *
 from freegames import vector
 
@@ -48,13 +36,45 @@ def circleD(start, end):
     circle(end.x-start.x)
     end_fill()
 
+'''
+La funcion dibuja un rectangulo en la pantalla, desde donde el usuario dio click por primera vez hasta donde dio por segunda
+Entrada: Posicion en la pantalla al dar el primer y segundo click
+Salida: Ninguna
+'''
 def rectangle(start, end):
-    "Draw rectangle from start to end."
-    pass  # TODO
+    up()
+    goto(start.x, start.y)
+    down()
+    begin_fill()
 
+    for cout in range(2):
+        forward(end.x - start.x)
+        left(90)
+        start.x = start.x/2
+        end.x = end.x/2
+        forward(end.x - start.x)
+        left(90)
+        start.x = start.x*2
+        end.x = end.x*2
+    
+    end_fill()
+
+'''
+La funcion dibuja un triangulo en la pantalla, desde donde el usuario dio click por primera vez hasta donde dio por segunda
+Entrada: Posicion en la pantalla al dar el primer y segundo click
+Salida: Ninguna
+'''
 def triangle(start, end):
-    "Draw triangle from start to end."
-    pass  # TODO
+    up()
+    goto(start.x, start.y)
+    down()
+    begin_fill()
+
+    for cout in range(3):
+        forward(end.x - start.x)
+        left(120)
+    
+    end_fill()
 
 def tap(x, y):
     "Store starting point or draw shape."
