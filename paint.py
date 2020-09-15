@@ -35,7 +35,7 @@ def square(start, end):
 
 '''
 La funcion dibuja un circulo en la pantalla desde la primera posicion dada por el ususario hasta el segundo click
-Entrada:posicion en la pantalla al dar el primer y segundo click
+Entrada: Posicion en la pantalla al dar el primer y segundo click
 Salida: Ninguna
 '''
 
