@@ -1,15 +1,31 @@
+"""
+Intituto Tecnologico de Estudios Superiores de Monterrey
+Equipo "Default":
+Daniel de Zamacona Madero - A01570576
+Elmer Osiel Avila Vargas - A00826359
+El programa despliega una pantalla en la cual puedes crear dibujos simples como lineas y figuras, ademas se puede cambiar el color
+Fecha de Modificacion: 15/9/2020
+"""
 from turtle import *
 from freegames import vector
 
+'''
+La funcion dibuja una liena en la pantalla, desde donde el usuario dio click por primera vez hasta donde dio por segunda
+Entrada: Posicion en la pantalla al dar el primer y segundo click
+Salida: Ninguna
+'''
 def line(start, end):
-    "Draw line from start to end."
     up()
     goto(start.x, start.y)
     down()
     goto(end.x, end.y)
 
+'''
+La funcion dibuja un cuadro en la pantalla, desde donde el usuario dio click por primera vez hasta donde dio por segunda
+Entrada: Posicion en la pantalla al dar el primer y segundo click
+Salida: Ninguna
+'''
 def square(start, end):
-    "Draw square from start to end."
     up()
     goto(start.x, start.y)
     down()
@@ -28,7 +44,6 @@ Salida: Ninguna
 '''
 
 def circleD(start, end):
-    "Draw circle from start to end."
     up()
     goto(start.x, start.y)
     down()
@@ -76,8 +91,12 @@ def triangle(start, end):
     
     end_fill()
 
+'''
+Guarda la posicion inicial que se usara para el dibujo
+Entrada: Posicion x y, de la posicion inicial para el dibujo
+Salida: Ninguna
+'''
 def tap(x, y):
-    "Store starting point or draw shape."
     start = state['start']
 
     if start is None:
@@ -88,8 +107,12 @@ def tap(x, y):
         shape(start, end)
         state['start'] = None
 
+'''
+Guarda el estado de la llave
+Entrada: La llave y el valor
+Salida: Ninguna
+'''
 def store(key, value):
-    "Store value in state at key."
     state[key] = value
 
 state = {'start': None, 'shape': line}
